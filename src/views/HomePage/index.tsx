@@ -1,9 +1,11 @@
 import { defineComponent } from "vue";
+import { useInterfaceStore } from "../../store";
 
 export default defineComponent({
   setup() {
+    const interfaceStore = useInterfaceStore();
     return () => {
-      return <h1>temp</h1>;
+      return <h1>{JSON.stringify(interfaceStore)}</h1>;
     };
   },
 });

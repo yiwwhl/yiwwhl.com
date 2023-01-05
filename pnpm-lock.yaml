@@ -5,6 +5,7 @@ specifiers:
   '@vitejs/plugin-vue-jsx': ^3.0.0
   '@vueuse/core': ^9.11.0
   pinia: ^2.0.29
+  pinia-plugin-persist: ^1.0.0
   sass: ^1.57.1
   typescript: ^4.9.3
   vite: ^4.0.0
@@ -20,6 +21,7 @@ devDependencies:
   '@vitejs/plugin-vue': 4.0.0_vite@4.0.4+vue@3.2.45
   '@vueuse/core': 9.11.0_vue@3.2.45
   pinia: 2.0.29_prq2uz4lho2pwp6irk4cfkrxwu
+  pinia-plugin-persist: 1.0.0_pinia@2.0.29+vue@3.2.45
   sass: 1.57.1
   typescript: 4.9.4
   vite: 4.0.4_sass@1.57.1
@@ -1035,6 +1037,21 @@ packages:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
 
+  /pinia-plugin-persist/1.0.0_pinia@2.0.29+vue@3.2.45:
+    resolution: {integrity: sha512-M4hBBd8fz/GgNmUPaaUsC29y1M09lqbXrMAHcusVoU8xlQi1TqgkWnnhvMikZwr7Le/hVyMx8KUcumGGrR6GVw==}
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0
+      pinia: ^2.0.0
+      vue: ^2.0.0 || >=3.0.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      pinia: 2.0.29_prq2uz4lho2pwp6irk4cfkrxwu
+      vue: 3.2.45
+      vue-demi: 0.12.5_vue@3.2.45
+    dev: true
+
   /pinia/2.0.29_prq2uz4lho2pwp6irk4cfkrxwu:
     resolution: {integrity: sha512-5z/KpFecq/cIgfeTnulJXldiLcTITRkTe3N58RKYSj0Pc1EdR6oyCdnf5A9jLoVwBqX5LtHhd0kGlpzWvk9oiQ==}
     peerDependencies:
@@ -1182,6 +1199,21 @@ packages:
       sass: 1.57.1
     optionalDependencies:
       fsevents: 2.3.2
+
+  /vue-demi/0.12.5_vue@3.2.45:
+    resolution: {integrity: sha512-BREuTgTYlUr0zw0EZn3hnhC3I6gPWv+Kwh4MCih6QcAeaTlaIX0DwOVN0wHej7hSvDPecz4jygy/idsgKfW58Q==}
+    engines: {node: '>=12'}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      '@vue/composition-api': ^1.0.0-rc.1
+      vue: ^3.0.0-0 || ^2.6.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
+    dependencies:
+      vue: 3.2.45
+    dev: true
 
   /vue-demi/0.13.11_vue@3.2.45:
     resolution: {integrity: sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A==}
