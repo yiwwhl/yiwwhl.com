@@ -21,6 +21,7 @@
     "@vitejs/plugin-vue": "^4.0.0",
     "@vueuse/core": "^9.11.0",
     "commitlint": "^17.4.2",
+    "eslint": "^8.32.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
     "pinia": "^2.0.29",
