@@ -1,5 +1,4 @@
-import RouterView from "@/router/routes/RouterView";
-
+import { RouterView } from "vue-router";
 
 export default defineComponent({
   setup() {
