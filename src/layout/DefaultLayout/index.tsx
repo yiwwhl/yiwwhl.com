@@ -6,10 +6,19 @@ export default defineComponent({
   setup() {
     return () => {
       const header = () => <div class={styles.header}></div>;
+
+      const footer = () => (
+        <div class={styles.footer}>
+          <div>yiwwhl © {new Date().getFullYear()}</div>
+        </div>
+      );
       return (
         <>
           {header()}
-          <RouterView />
+          <div class={styles.contentWrapper}>
+            <RouterView />
+          </div>
+          {footer()}
         </>
       );
     };

@@ -2,3 +2,15 @@
   height: 80px;
   background-color: #000;
 }
+
+.contentWrapper {
+  height: calc(100vh - 80px * 2);
+}
+
+.footer {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
