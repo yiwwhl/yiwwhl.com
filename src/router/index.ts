@@ -22,12 +22,23 @@ const router = createRouter({
           component: () => import("@/views/HomePage/index"),
           meta: {
             locale: "首页",
-            requiresAuth: true,
+          },
+        },
+        {
+          path: "/404",
+          name: "NotFound",
+          component: () => import("@/views/NotFound/index"),
+          meta: {
+            locale: "找不到页面",
           },
         },
       ],
     },
     ...moduleRoutes,
+    {
+      path: "/:catchAll(.*)",
+      redirect: "/404",
+    },
   ],
 });
 

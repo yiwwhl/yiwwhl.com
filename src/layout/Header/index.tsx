@@ -3,9 +3,14 @@ import styles from "./index.module.scss";
 import avatar from "@/assets/images/avatar.png";
 import router from "@/router";
 
+interface NavBarItem {
+  routerName: string;
+  label: string;
+}
+
 export default defineComponent({
   setup() {
-    const navBarList = [
+    const navBarList: NavBarItem[] = [
       {
         routerName: "HomePage",
         label: "Home",
@@ -20,6 +25,14 @@ export default defineComponent({
       },
     ];
 
+    const handleNavBarClick = (navBar: NavBarItem) => {
+      try {
+        router.push({ name: navBar.routerName });
+      } catch {
+        router.push({ name: "NotFound" });
+      }
+    };
+
     return () => {
       return (
         <div class={styles.contentWrapper}>
@@ -27,7 +40,7 @@ export default defineComponent({
             {navBarList.map((navBar) => (
               <div
                 class={styles.navBar}
-                onClick={() => router.push({ name: navBar.routerName })}
+                onClick={() => handleNavBarClick(navBar)}
               >
                 {navBar.label}
               </div>
