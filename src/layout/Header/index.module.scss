@@ -1,0 +1,42 @@
+.contentWrapper {
+  width: 100%;
+  height: 50px;
+  background-color: #f9f9f580;
+  backdrop-filter: blur(5px);
+  position: fixed;
+  padding: 10px 0;
+  box-sizing: border-box;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  display: flex;
+}
+
+.navBarWrapper {
+  height: 100%;
+  width: 100%;
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 30px;
+  border-radius: 50%;
+}
+
+.navBar {
+  color: #333;
+  font-weight: bold;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  &:hover {
+    background-color: #d8d8d350;
+    cursor: pointer;
+  }
+}
