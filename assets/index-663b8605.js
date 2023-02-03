@@ -1,0 +1,1 @@
+import{d as r,u as a,c as e,a as s}from"./index-77933312.js";const n="_headerImage_gp5kx_1",o={headerImage:n},c="/assets/cyberpunkCoder-0bf79580.jpg",u=r({setup(){a();const t=()=>e("div",null,[e("img",{src:c,class:o.headerImage},null),e("h1",{style:{marginLeft:"400px"}},[s("Welcome")])]);return()=>t()}});export{u as default};
