@@ -1,0 +1,1 @@
+import{d as n,u as r,c as e,a as o}from"./index-fe89444d.js";const s=n({setup(){r();const t=()=>e("div",null,[e("h1",{style:{marginLeft:"400px"}},[o("Welcome")])]);return()=>t()}});export{s as default};
