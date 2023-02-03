@@ -5,6 +5,7 @@ import router from "@/router";
 import cyberpunkCoder from "@/assets/images/cyberpunkCoder.jpg";
 import city from "@/assets/images/city.png";
 import grass from "@/assets/images/grass.png";
+import cloud from "@/assets/images/cloud.jpg";
 
 interface NavBarItem {
   routerName: string;
@@ -39,9 +40,13 @@ export default defineComponent({
         currentNavBarIndex.value = index;
         router.push({ name: navBar.routerName });
       } catch {
-        currentNavBarIndex.value = 0;
+        currentNavBarIndex.value = -1;
         router.push({ name: "NotFound" });
       }
+    };
+
+    const getHeaderImg = (currentNavBarIndex: number) => {
+      return navBarList[currentNavBarIndex]?.headerImg ?? cloud;
     };
 
     return () => {
@@ -62,7 +67,7 @@ export default defineComponent({
           </div>
 
           <img
-            src={navBarList[currentNavBarIndex.value].headerImg}
+            src={getHeaderImg(currentNavBarIndex.value)}
             class={styles.headerImg}
           ></img>
         </>
