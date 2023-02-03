@@ -9,7 +9,7 @@ const Projects = {
   },
   children: [
     {
-      path: "list",
+      path: "/list",
       name: "ProjectsList",
       component: () => import("@/views/Projects/List/index"),
     },

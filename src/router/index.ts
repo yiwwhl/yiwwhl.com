@@ -17,7 +17,7 @@ const router = createRouter({
       },
       children: [
         {
-          path: "homepage",
+          path: "/homepage",
           name: "HomePage",
           component: () => import("@/views/HomePage/index"),
           meta: {
