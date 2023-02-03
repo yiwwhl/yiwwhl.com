@@ -11,6 +11,9 @@ const Projects = {
     {
       path: "/list",
       name: "ProjectsList",
+      meta: {
+        locale: "项目列表",
+      },
       component: () => import("@/views/Projects/List/index"),
     },
   ],

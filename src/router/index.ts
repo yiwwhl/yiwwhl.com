@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import { DEFAULT_LAYOUT } from "./base";
 import { moduleRoutes } from "./routes";
+import { useTitleWithDefault } from "@/hooks/interface";
 
 const router = createRouter({
   history: createWebHashHistory(),
@@ -40,6 +41,10 @@ const router = createRouter({
       redirect: "/404",
     },
   ],
+});
+
+router.beforeEach(({ meta: { locale } }) => {
+  useTitleWithDefault(locale as string);
 });
 
 export default router;
