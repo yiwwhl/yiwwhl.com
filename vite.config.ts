@@ -6,7 +6,6 @@ import { join } from "path";
 
 export default defineConfig(() => {
   return {
-    base: "/yiwwhl.com/",
     resolve: {
       alias: {
         "@": join(__dirname, "src"),
